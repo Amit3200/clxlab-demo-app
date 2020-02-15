@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{url_for('static',filename='css/argon.min.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+    <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/popper/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="{{url_for('static',filename='js/argon.min.js')}}"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">Cloudxlab</a>
+        </div>
+    </nav>
+    {% if "login_status" not in request.cookies.keys() %}
+    <div class="container pt-lg-7">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="card targetbody1 bg-secondary shadow border-0">
+                    <h6 class="main-text mb3">Log In, and continue your experience</h6>
+                    <div class="card bg-secondary shadow border-0">
+                        <div class="card-body px-lg-5 py-lg-5">
+                            <form role="form" action="/accounts/login/db" method="POST">
+                                <div class="form-group mb-3">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Email" name="email" type="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group focused">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Password" name="password" type="password" required>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <input type="submit" class="btn btn-primary my-4" value="Log In">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="display-msg">
+        <p>Not Fully Implemented!, Though if you are seeing this it means you are still logged in with some username and id</p>
+        <p>Destroy cookie to test this feature</p>
+    </div>
+{% endif %}
+    <!-- Core -->
+    <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/popper/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/headroom/headroom.min.js')}}"></script>
+    <!-- Argon JS -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</body>
+
+</html>

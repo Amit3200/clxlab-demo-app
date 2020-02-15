@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
+    <link href="{{url_for('static',filename='vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{url_for('static',filename='css/argon.min.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+    <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/popper/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="{{url_for('static',filename='js/argon.min.js')}}"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">Cloudxlab</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary"
+                aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+                <div class="card targetbody card-lift--hover shadow border-0">
+                    <div class="card-body content py-5">
+                        <h7 class="main-heading1">{{msg}}</h7><br>
+                            <a href="/accounts/logout" class="btn btn-danger btn-sm">Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Core -->
+    <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/popper/popper.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/bootstrap/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static',filename='vendor/headroom/headroom.min.js')}}"></script>
+    <!-- Argon JS -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</body>
+
+</html>
