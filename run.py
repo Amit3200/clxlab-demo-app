@@ -8,7 +8,7 @@ from datetime import datetime,timedelta
 from flask import Flask, render_template, redirect, url_for, request,jsonify,make_response
 app = Flask(__name__)
  
-#not recommended to give but just for demonstration
+#not recommended to give but just for demonstration (use enviornment variables)
 KEY="Ht1EaxLc6vijk-QW9VFg206b0JGPIG5vH54yP3-HOKs="
 
   
